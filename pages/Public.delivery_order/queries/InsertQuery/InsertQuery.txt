@@ -1,0 +1,26 @@
+INSERT INTO public."delivery_order" (
+	"customer",
+	"customer_phone",
+	"pickup_address",
+	"dropoff_address",
+	"order_lat",
+	"order_long",
+	"status",
+	"eta",
+	"delivery_time",
+	"review",
+	"no_of_items"
+)
+VALUES (
+	'{{insert_form.formData.customer}}',
+	'{{insert_form.formData.customer_phone}}',
+	'{{insert_form.formData.pickup_address}}',
+	'{{insert_form.formData.dropoff_address}}',
+	'{{insert_form.formData.order_lat}}',
+	'{{insert_form.formData.order_long}}',
+	'{{insert_form.formData.status}}',
+	'{{insert_form.formData.eta}}',
+	'{{insert_form.formData.delivery_time}}',
+	'{{insert_form.formData.review}}',
+	'{{insert_form.formData.no_of_items}}'
+);

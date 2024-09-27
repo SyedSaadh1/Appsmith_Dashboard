@@ -1,0 +1,13 @@
+UPDATE public."delivery_order" SET
+		"customer" = '{{update_form.fieldState.customer.isVisible ? update_form.formData.customer : update_form.sourceData.customer}}',
+		"customer_phone" = '{{update_form.fieldState.customer_phone.isVisible ? update_form.formData.customer_phone : update_form.sourceData.customer_phone}}',
+    "pickup_address" = '{{update_form.fieldState.pickup_address.isVisible ? update_form.formData.pickup_address : update_form.sourceData.pickup_address}}',
+		"dropoff_address" = '{{update_form.fieldState.dropoff_address.isVisible ? update_form.formData.dropoff_address : update_form.sourceData.dropoff_address}}',
+		"order_lat" = '{{update_form.fieldState.order_lat.isVisible ? update_form.formData.order_lat : update_form.sourceData.order_lat}}',
+		"order_long" = '{{update_form.fieldState.order_long.isVisible ? update_form.formData.order_long : update_form.sourceData.order_long}}',
+		"status" = '{{update_form.fieldState.status.isVisible ? update_form.formData.status : update_form.sourceData.status}}',
+		"eta" = '{{update_form.fieldState.eta.isVisible ? update_form.formData.eta : update_form.sourceData.eta}}',
+		"delivery_time" = '{{update_form.fieldState.delivery_time.isVisible ? update_form.formData.delivery_time : update_form.sourceData.delivery_time}}',
+		"review" = '{{update_form.fieldState.review.isVisible ? update_form.formData.review : update_form.sourceData.review}}',
+		"no_of_items" = '{{update_form.fieldState.no_of_items.isVisible ? update_form.formData.no_of_items : update_form.sourceData.no_of_items}}'
+	WHERE "id" = {{data_table.selectedRow.id}};

@@ -1,0 +1,2 @@
+DELETE FROM public."delivery_order"
+  WHERE "id" = {{data_table.triggeredRow.id}};
